@@ -1,13 +1,11 @@
-class Pemain(Player1:String, Player2:String) {
-    var namaPlayer1: String
-    var namaPlayer2: String
-    init {
-        namaPlayer1 = Player1
-        namaPlayer2 = Player2
-        setNamaPemain(namaPlayer1)
+class Pemain(var nama:String) {
+    lateinit var nilai:String
+    fun input():Unit{
+        do {
+            //munculkan tangan player
+            println("Masukkan pilihan $nama:")
+            nilai = readLine().toString().lowercase()
+        } while (Validasi(nilai)==false)
     }
-    fun setNamaPemain(nama:String):String{
-        return namaPlayer1
 
-    }
 }
